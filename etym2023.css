@@ -1,0 +1,189 @@
+.word, .related, .wordDetail {
+    font-family: 'Noto Serif', "Times New Roman", serif;
+}
+
+.word {
+    margin-bottom: 2em;
+}
+
+h1,h2,h3 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: .5em 0 1em;
+    padding: 0;
+}
+
+h1.hw,p.hw {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #801;
+    border-bottom: 1px solid gray;
+    margin-bottom: .5em;
+}
+
+h1.hw pos,p.hw pos,.related_hw pos {
+    font-size: .8em;
+    font-weight: normal;
+    font-style: italic;
+    margin-left: .5em;
+    color: #222;
+}
+
+section.defination {
+    display: block;
+    margin: .2em 0 1.2em;
+}
+
+.foreign {
+    font-style: normal;
+    color: firebrick;
+}
+
+.foreign strong {
+    color: #222;
+}
+
+blockquote {
+    background-color: rgb(244, 244, 244);
+    color: #234;
+    border-left: 5px solid #dde;
+    margin: 0px;
+    padding: 2px 10px;
+}
+
+.chart {
+    overflow: auto;
+}
+
+.chart img {
+    width: 200px;
+    height: auto;
+    cursor: zoom-in;
+    margin: .5em;
+    transition: all 200ms;
+}
+
+.chart img.zoomout {
+    width: 840px;
+    cursor: zoom-out;
+}
+
+.chart img:hover,
+.chart img.zoomout {
+    border-radius: .5em;
+    box-shadow: 0px 1px 8px gray;
+}
+
+/* 段落中的荧光笔标记 */
+sense {
+    background: linear-gradient(104deg, #bdd0 0.9%, #bdd 2.4%, #bdd8 5.8%, #bdd1 93%, #bdda 96%, #bdd0 98%), linear-gradient(183deg, #bdd0 0%, #bdd5 7.9%, #bdd0 15%);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    border-radius: 5px;
+    text-shadow: 0px 1px 2px #2223;
+    padding: 0px;
+}
+
+h3.h3_title, more:before {
+    border-bottom: 1px dotted gray;
+    font-size: .9em;
+    margin-top: 1em;
+}
+
+.related_word {
+    background-color: #eeea;
+    margin: 1em 0;
+    padding: 5px;
+    box-shadow: 0 1px 4px gray inset;
+    overflow: auto;
+}
+
+.related_word img {
+    width: 100px;
+    float: left;
+    margin: 0 .5em 0 .3em;
+}
+
+.related a.related_hw {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #801;
+}
+
+a.crossreference {
+    color: #801;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px dotted gray;
+}
+
+a.crossreference:hover,a.related_hw:hover {
+    color: #28d;
+}
+
+a.related_word {
+    display: inline-block;
+    margin: 2px 6px 2px 0;
+    background-color: #eeea;
+    color: #801;
+    padding: 2px 5px;
+    width: 11em;
+    min-width: 18%;
+    box-shadow: none;
+}
+
+a.related_word pos {
+    font-style: italic;
+    color: #222;
+    font-size: .8em;
+}
+
+a.related_word:hover {
+    box-shadow: 0 0 2px gray;
+}
+
+/* CEFR等级 */
+a.related_word[cefr]:after {
+    content: attr(cefr);
+    color: green;
+    float: right;
+    font-size: .9em;
+    background-color: #6e11;
+}
+
+/* 无CEFR等级的单词，显示COCA60000词频（超出COCA60000的不做标记） */
+a.related_word[coca]:after {
+    color: #6934;
+    float: right;
+    font-size: .75em;
+    transition: all 200ms 2s;
+}
+a.related_word[coca^='0']:after{content: '10k';color:#693;}
+a.related_word[coca^='1']:after{content: '20k';color:#693d;}
+a.related_word[coca^='2']:after{content: '30k';color:#693b;}
+a.related_word[coca^='3']:after{content: '40k';}
+a.related_word[coca^='4']:after{content: '50k';}
+a.related_word[coca^='5']:after{content: '60k';}
+a.related_word[coca^='6']:after{content: '70k';}
+a.related_word[coca]:hover:-after{content: attr(coca)}
+
+a.related_word, a.related_hw {
+    text-decoration: none;
+}
+
+more:before {
+    content: 'Related words';
+    display: block;
+    font-weight: bold;
+    margin: 1.5em 0 .5em;
+}
+
+p.wordDetail {
+    color: #789;
+    font-size: .8em;
+    margin-top: 1em;
+    user-select: none;
+}

@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Build artifacts
+*.dictionary/
+AppleDict/
+
+# Large binary files (use Git LFS if needed)
+# *.mdx
+# *.mdd
+
+# Claude
+.claude/

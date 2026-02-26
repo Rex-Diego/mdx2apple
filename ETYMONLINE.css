@@ -1,0 +1,15 @@
+﻿body {
+   font-family: Georgia, Times New Roman, serif;
+   font-size: 12px;
+}
+a:link { color: #800020;TEXT-DECORATION: none;font-weight: bold; }
+a:visited { color: #800020;TEXT-DECORATION: none;font-weight: bold; }
+a:hover { color: #800020;TEXT-DECORATION: none;font-weight: bold; }
+a:active { color: #800020;TEXT-DECORATION: none;font-weight: bold; }
+WORD2 { color: #800020;TEXT-DECORATION: none;font-weight: bold;}
+crossreference, .foreign { font-style: italic; }
+dd, dt {
+   background-color: #DDD9CA;
+   margin: 2px;
+   padding: 2px;
+}
